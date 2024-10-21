@@ -1,0 +1,36 @@
+FCC Basic Algorithmic Thingking - Number Sorter
+
+CONTENT:
+1. getElementsByClassName('class_name')
+  > The getElementsByClassName method of Document interface returns an array-like object of all child elements which have all of the given class name(s).
+  > returns HTML collections
+
+2. (RECALL) spread operator (...)
+  > The spread operator (...) in JavaScript is a powerful and versatile syntax used to expand elements of an iterable (like arrays, strings, or even objects) in places where multiple elements are expected.
+  > ex use case:
+  1. The spread operator can be used to create a shallow copy of an array.
+  code: 
+  const originalArray = [1, 2, 3];
+  const newArray = [...originalArray]; // [1, 2, 3]
+
+  2. It can also be used to merge multiple arrays into one.
+  code: 
+  const array1 = [1, 2, 3];
+  const array2 = [4, 5, 6];
+  const mergedArray = [...array1, ...array2]; // [1, 2, 3, 4, 5, 6]
+
+  3. Used to convert HTMLCollection into an actual array
+  const inputValues = [...document.getElementsByClassName("values-dropdown")].map((dropdown) => 
+  Number(dropdown.value)); 
+
+  4. more use case and explanation here: https://chatgpt.com/share/6715e3b7-86f8-8009-9523-52d7e72773a7
+
+3. Sorting algorithm (Bubble Sort)
+  > bubble sort starts at the beginning of the array and 'bubbles up' unsorted values towards the end, iterating through the array until it is completely sorted.
+  > check the script.js for the algo and how it works
+
+4. Sorting algorithm (Selection Sort)
+  > Selection sort works by finding the smallest value in the array, then swapping it with the first value in the array. Then, it finds the next smallest value in the array, and swaps it with the second value in the array. It continues iterating through the array until it is completely sorted.
+  > check the script.js for the algo and how it works
+
+
