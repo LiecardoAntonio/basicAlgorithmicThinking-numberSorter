@@ -38,6 +38,21 @@ CONTENT:
   > check the script.js for the algo and how it works
 
 6. array.sort();
-  > JS built-in for array sorting.
+  > JS built-in for array sorting. It works by converting the numbers values to strings, and sort them alphabetically.
+  > With the default behavior of the sory method, it comes with an obvious downside, which we can see in this example:
+  > for example:
+  console.log([1,9,4,7,10,2,4].sort()); //[1, 10, 2, 4, 4, 7, 9]
+  > Notice how the number 10 is placed at the beginning of the array. This is because the default behavior of .sort() is to convert the numbers values to strings, and sort them alphabetically. And "10" comes before "2" alphabetically.
+  > To fix this, you can pass a callback function to the .sort() method. The callback function has two parameters - for yours, use a and b. The parameters of a and b represent the number values in the array that will be sorted.
+  > The callback to .sort() should return a number. That number determines how to sort the elements a and b:
+  a. If the number is negative, sort a before b.
+  b. If the number is positive, sort b before a.
+  c. If the number is zero, do not change the order of a and b.
+  > code example:
+  const sortedValues = inputValues.sort((a, b) => {
+    return a-b;
+  });
+  // the above function sort from smallest to biggest
+
 
 

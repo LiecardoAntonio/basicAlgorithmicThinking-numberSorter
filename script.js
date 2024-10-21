@@ -8,6 +8,10 @@ const sortInputArray = (event) => {
   // const sortedValues = selectionSort(inputValues); //uncomment to see the selection sort algo
   const sortedValues = insertionSort(inputValues);
   // const sortedValues = inputValues.sort(); //uncomment to use js built-in method to sort an array
+  // .sort method to prevent the default behavior of .sort method:
+  // const sortedValues = inputValues.sort((a, b) => {
+  //   return a-b;
+  // });
 
   updateUI(sortedValues); 
 }
@@ -106,5 +110,6 @@ const inputValues2 = document.getElementsByClassName("values-dropdown");
 console.log(inputValues2);
 
 
-
+// check .sort method
+console.log([1,9,4,7,10,2,4].sort()); //[1, 10, 2, 4, 4, 7, 9]
 
